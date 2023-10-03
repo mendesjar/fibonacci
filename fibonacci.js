@@ -4,7 +4,7 @@ const calculoFibonacci = (numero) => {
   let a = BigInt(0),
     b = BigInt(1);
 
-  if (Number.isFinite(numero)) {
+  if (!Number.isFinite(numero)) {
     numero = 0;
   }
 
@@ -14,7 +14,7 @@ const calculoFibonacci = (numero) => {
   return a.toString();
 };
 
-const calculo = calculoFibonacci(1);
+const calculo = calculoFibonacci(10);
 console.log(calculo);
 
 console.timeEnd("Terminou");
